@@ -36,3 +36,4 @@ document.addEventListener('DOMContentLoaded', () => {
     handleLogin('doctorLoginForm', 'api/doctor/login.php', 'doctor/dashboard.html');
     handleLogin('adminLoginForm', 'api/admin/login.php', 'admin/dashboard.html');
 });
+
