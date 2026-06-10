@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System | Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg login-card">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4 title-gradient">Hospital Portal</h2>
+                
+                <ul class="nav nav-pills nav-justified mb-4" id="loginTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="patient-tab" data-bs-toggle="pill" data-bs-target="#patient" type="button" role="tab">Patient</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="doctor-tab" data-bs-toggle="pill" data-bs-target="#doctor" type="button" role="tab">Doctor</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="admin-tab" data-bs-toggle="pill" data-bs-target="#admin" type="button" role="tab">Admin</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="loginTabsContent">
+                    <!-- Patient Login -->
+                    <div class="tab-pane fade show active" id="patient" role="tabpanel">
+                        <form id="patientLoginForm">
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 btn-glow">Login as Patient</button>
+                            <div class="text-center mt-3">
+                                <a href="patient_register.html" class="text-decoration-none text-muted">New patient? Register here</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Doctor Login -->
+                    <div class="tab-pane fade" id="doctor" role="tabpanel">
+                        <form id="doctorLoginForm">
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 btn-glow">Login as Doctor</button>
+                        </form>
+                    </div>
+                    <!-- Admin Login -->
+                    <div class="tab-pane fade" id="admin" role="tabpanel">
+                        <form id="adminLoginForm">
+                            <div class="mb-3">
+                                <label class="form-label">Username</label>
+                                <input type="text" name="username" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 btn-glow">Login as Admin</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="loginAlert" class="alert mt-3 d-none"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
